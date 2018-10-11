@@ -35,20 +35,11 @@ class TableViewController: UITableViewController {
     }
 
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        // calculates where the user is in the y-axis
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         
         if offsetY > contentHeight - scrollView.frame.size.height {
-            
-            // increments the number of the page to request
-            
-            
-            // call your API for more data
             TransactionManager.shared.getNextNTranscations() { error in
-            
-            // tell the table view to reload with the new data
             self.tableView.reloadData()
             }
             self.tableView.reloadData()
