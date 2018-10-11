@@ -1,0 +1,6 @@
+framework module Pods_finnestWorkSample {
+  umbrella header "Pods-finnestWorkSample-umbrella.h"
+
+  export *
+  module * { export * }
+}
